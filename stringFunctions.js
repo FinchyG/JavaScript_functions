@@ -134,3 +134,15 @@ function sortAlphabetically(str){
     return str.split("").sort().join("");
 
 }
+
+// function to rotate a string right
+
+function stringRotateRight(str){
+    
+    setInterval(function(){
+        str = str.substring(str.length -1) + str.substring(0, str.length - 1);
+        console.log(str);
+        },
+    1000);
+
+}

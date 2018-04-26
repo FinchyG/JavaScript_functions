@@ -1,3 +1,59 @@
+// function to add one number to another
+
+function add(x,y){
+
+    return x + y;
+
+}
+
+//function to subtract one number from another
+
+function subtract(x,y){
+
+    return x - y;
+
+}
+
+// function to multiply one number by another
+
+function multiply(x,y){
+
+    return x * y;
+
+}
+
+// function to divide one number by another
+
+function divide(x,y){
+
+    return x / y;
+
+}
+
+// function to calculate the remainder of one number divided by another
+
+function remainder(x,y){
+
+    return x % y;
+
+}
+
+// function to calculate the square of a number
+
+function square(x){
+
+    return x * x;
+
+}
+
+// function to calculate the cube of a number
+
+function cube(x){
+    
+    return x * x * x;
+
+}
+
 // function to calculate random number between specific range
 
 function randomNumber(min, max) {
