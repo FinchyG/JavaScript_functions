@@ -54,6 +54,22 @@ function cube(x){
 
 }
 
+// function to add a number after three seconds "thinking time"
+
+function addAfterThreeSeconds(num){
+
+    var interval = setInterval(function(){add(num)}, 3000);
+    
+    function add(num){
+    
+        var result = num + num;
+        console.log(result);
+        clearInterval(interval);
+    
+    }
+
+}
+
 // function to calculate random number between specific range
 
 function randomNumber(min, max) {
@@ -188,4 +204,24 @@ var validNum = checkForFourDigits();
 
     return validNum;
     
+}
+
+// function to convert Celsius to Farenheit
+
+function convertCToF(){
+
+    var degreesCelsius = document.getElementById("#").value; 
+
+    return degreesCelsius * 1.8 + 32;
+
+}
+
+// function to convert Farenheit to Celsius
+
+function convertFToC(){
+
+    var degreesFarenheit = document.getElementById("#").value;
+
+    return (degreesFarenheit - 32) / 1.8;
+
 }
