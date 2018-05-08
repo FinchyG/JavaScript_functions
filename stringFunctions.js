@@ -146,3 +146,38 @@ function stringRotateRight(str){
     1000);
 
 }
+
+// function to prepend a sentence with "the"
+
+function startWithThe(str){
+
+    if(str.substring(0,3).match(/the/i)){
+        return str;
+    }
+
+    return "The " + str;
+
+}
+
+// function to remove a character based on its position in a string
+
+function removeChar(str, charPos){
+
+    str1 = str.substring(0, charPos);
+    str2 = str.substring(charPos + 1, str.length);
+
+    return str1 + str2;
+    
+}
+
+// function to check for palindromes
+
+function checkForPalindrome(str){
+    
+    if(str === str.split("").reverse().join("")){
+        return "This is a palindrome";
+    }
+    
+    return "This is not a palindrome";
+    
+}

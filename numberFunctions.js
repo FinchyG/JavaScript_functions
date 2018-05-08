@@ -225,3 +225,36 @@ function convertFToC(){
     return (degreesFarenheit - 32) / 1.8;
 
 }
+
+// function to check for a negative value
+
+function checkForNegative(num1, num2){
+
+    switch(true){
+        
+        case (num1 < 0 && num2 < 0):
+        return "Both of the values are negative.";
+        break;
+    
+        case (num1 < 0 && num2 >= 0 || num1 >= 0 && num2 < 0):
+        return "One of the values is negative.";
+        break;
+        
+        case (num1 > 0 && num2 > 0):
+        return "Neither of the values are positive.";
+        break;
+        
+    }
+
+}
+
+// function to reverse a number
+
+function reverseNumber(num){
+
+    var reversedNumStr = num.toString().split("").reverse().join("");
+    var reversedNum    = parseInt(reversedNumStr);
+
+    return reversedNum;
+
+}
