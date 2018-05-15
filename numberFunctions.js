@@ -153,59 +153,6 @@ function timeConvert(num){
 
 }
 
-function kaprekarsConstant(num){
-
-    const kap      = 6174;
-    var numStr     = num.toString();
-
-    function checkForFourDigits(numStr){
-        if(numStr.length < 4){
-            var fourDigitNumStr = increaseToFourDigits(numStr);
-            return fourDigitNumStr;
-        } else {
-            return numStr;
-        }
-    }
-
-    function increaseToFourDigits(x){
-        while(x.length < 4){
-            x = x + "0";
-        }
-        return x;
-    }
-    
-}
-
-kaprekarsConstant(2110);
-
-if(number.length !== 4){
-    console.log("Not a valid four-digit number");
-} else {
-    console.log("That is a valid four-digit number");
-}
-
-function kaprekarsConstant(num){
- 
-var validNum = checkForFourDigits();
-
-    function checkForFourDigits(num){
-        if(num < 1000){
-        while(num < 1000){
-            num = num * 10;
-        }
-        return num;
-        } else { 
-        while(num > 9999){
-        num = Math.floor(num / 10);
-        }
-        return num;
-        }
-    }
-
-    return validNum;
-    
-}
-
 // function to convert Celsius to Farenheit
 
 function convertCToF(){
@@ -256,5 +203,87 @@ function reverseNumber(num){
     var reversedNum    = parseInt(reversedNumStr);
 
     return reversedNum;
+
+}
+
+//function to check a number range
+
+function rangeChecker_50_99(x,y) {
+
+    if((x >= 50 && x <= 99) && (!(y >= 50 && y <= 99))) {
+        return "x in range: y not in range";
+    } else if (!(x >= 50 && x <= 99) && ((y >= 50 && y <= 99))) {
+        return "x not in range: y in range"; 
+    } else if (!(x >= 50 && x <= 99) && (!(y >= 50 && y <= 99))) {
+        return "x not in range: y not in range";
+    } else
+        return "x in range: y in range";
+    
+}
+
+// function to find the highest number
+
+function highest_number(x,y,z) {
+
+    return Math.max(x,y,z);
+
+}
+
+// function to find the lowest number
+
+function lowest_number(x,y,z) {
+
+    return Math.min(x,y,z);
+    
+}
+
+// function to test for a valid number using isNan
+
+function valid_number(num) {
+
+    if(isNaN(num)) {
+        return "Is not a valid number";
+    }
+
+    return "Is a valid number";
+
+}
+
+// function to test for a valid number using isNan negation
+
+function valid_number(num) {
+
+    if(!(isNaN(num))) {
+        return "Is valid number";
+    }
+
+    return "Is not valid number";
+
+}
+
+// function to more thoroughly test for a valid number using isNan and typeof
+
+function valid_number(num) {
+
+    if(typeof(num) !== "number" || isNaN(num)) {
+        return "Is not valid number";
+    } else 
+        return "Is valid number";
+
+}
+
+// function to work out which number is closest to 100
+
+function closest_to_100(num1,num2) {
+
+    numA = num1 <= 100 ? 100 - num1 : num1 - 100;
+    numB = num2 <= 100 ? 100 - num2 : num2 - 100;
+
+    if(numA < numB) {
+        return num1 + " is closest to 100.";
+    } else if(numB < numA) {
+        return num2 + " is closest to 100.";
+    } else
+        return num1 + " and " + num2 + " are equally close to 100.";
 
 }

@@ -181,3 +181,30 @@ function checkForPalindrome(str){
     return "This is not a palindrome";
     
 }
+
+// function to alter words in a sentence
+
+function replace_words(str, word1, word2) {
+
+    return str.replace(word1, word2);
+    
+}
+
+// function to count the number of times a character appears in a string
+
+function character_counter(str,char) {
+
+    count = 0;
+
+    for(i=0; i <= str.length - 1; i++) {
+        if(str.charAt(i) === char) {
+            count++;
+        }
+    }
+
+    return count;
+
+}
+
+// function to check whether one integer can be divided by another integer leaving no remainder
+
