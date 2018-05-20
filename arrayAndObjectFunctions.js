@@ -1,4 +1,4 @@
-// function to list the clubs a footballer has made appearances for
+// function to list the clubs a footballer has made appearances for using forEach
 
 function clubs_list() {
 
@@ -33,5 +33,35 @@ function footballers_club_list(player, ...clubs) {
     var teams = [...clubs].join(', ');
 
     return player + " played for: " + teams + ".";
+
+}
+
+// function to list favourite footballers using for...in
+
+function favourtie_footballers() {
+
+    var string      = "My favourite footballers are ";
+    var footballers = {
+                        1: "David Beckham",
+                        2: "Michael Owen",
+                        3: "Tony Adams"
+                      };
+    var length      = Object.keys(footballers).length;
+    var count       = 0;
+        
+    for (var player in footballers) {
+        count ++;
+        if(count === length - 1) {
+            string += footballers[player] + " ";
+            continue;
+        }
+        if(count === length) {
+            string += "and " + footballers[player] + ".";
+            break;
+        }
+        string += footballers[player] + ", ";
+    }
+
+    return string;
 
 }
