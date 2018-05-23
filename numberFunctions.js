@@ -58,13 +58,12 @@ function cube(x){
 
 function addAfterThreeSeconds(num){
 
-    var interval = setInterval(function(){add(num)}, 3000);
+    var timeout = setTimeout(function(){add(num)}, 3000);
     
     function add(num){
     
         var result = num + num;
         console.log(result);
-        clearInterval(interval);
     
     }
 
